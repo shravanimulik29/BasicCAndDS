@@ -14,28 +14,21 @@
   *
   **/
   
-#include <stdio.h> /* printf, scanf */
+#include <stdio.h> 
 
-/* Function declatations */
-int FibonacciTerm(int);
 
-/* Main */
 int main()
 {
-	int Number;
-	int i;
+	int a,b,result,n,i;
 	printf("Upto which term? ");
-	scanf("%d",&Number);
-	for(i=1;i<=Number;i++)
-		printf("%d",FibonacciTerm(i));
-	putchar('\n');
+	scanf("%d",&n);
+	a=0;
+	b=1;
+	for(i=1;i<=n;i++)
+		printf("%d",a);
+	result=a+b;
+	a=b;
+	b=result;
 	return 0;
 }
 
-/* Calculate a fibonacci term */
-int FibonacciTerm(int Number)
-{
-	if(Number==1||Number==2)
-		return 1;
-	else return FibonacciTerm(Number-1)+FibonacciTerm(Number-2);
-}
